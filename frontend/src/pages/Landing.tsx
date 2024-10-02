@@ -17,9 +17,9 @@ export  function Landing() {
   }, [])
 
   return (
-    <div className="flex flex-col w-screen absolute top-0 left-0 min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+    <div className="flex flex-col w-full bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <header className={`sticky top-0 z-50 transition-all duration-200 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-md' : ''}`}>
-        <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <div className="w-full mx-auto px-4 h-16 flex items-center justify-between">
           <Link className="flex items-center justify-center space-x-2" to="#">
             <Code2 className="h-8 w-8 text-indigo-600" />
             <span className="font-bold text-xl text-gray-900">CodeRunner</span>
@@ -36,7 +36,7 @@ export  function Landing() {
       </header>
       <main className="flex-1">
         <section className="py-20 md:py-32 overflow-hidden">
-          <div className="container mx-auto px-4">
+          <div className="w-full mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 space-y-6">
                 <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
@@ -65,7 +65,7 @@ export  function Landing() {
           </div>
         </section>
         <section className="py-20 bg-gradient-to-b from-white to-indigo-50">
-          <div className="container mx-auto px-4">
+          <div className="w-full mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Our Core Features</h2>
             <div className="grid gap-8 md:grid-cols-3">
               {[
@@ -83,7 +83,7 @@ export  function Landing() {
           </div>
         </section>
         <section className="py-20">
-          <div className="container mx-auto px-4">
+          <div className="w-full mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="md:w-1/2 space-y-6">
                 <h2 className="text-3xl font-bold">Why Choose Our Platform?</h2>
@@ -118,7 +118,7 @@ export  function Landing() {
           </div>
         </section>
         <section className="py-20 bg-indigo-900 text-white">
-          <div className="container mx-auto px-4 text-center">
+          <div className="w-full mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-8">What Our Students Say</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
@@ -136,7 +136,7 @@ export  function Landing() {
           </div>
         </section>
         <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
+          <div className="w-full mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-8">Ready to Get Started?</h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Join thousands of students who are already enhancing their skills and preparing for successful careers.
@@ -149,7 +149,7 @@ export  function Landing() {
         </section>
       </main>
       <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
+        <div className="w-full mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <h3 className="font-bold text-lg mb-4">CodeCampus</h3>

@@ -46,7 +46,7 @@ export default function LearnPage() {
                   <CardDescription className="text-gray-400">{lang.description}</CardDescription>
                 </CardHeader>
                 <CardFooter>
-                  <Button variant="outline" className="w-full" onClick={()=>{navigate("/user/dsa/topics")}}>Start Roadmap</Button>
+                  <Button variant="outline" className="w-full" onClick={()=>{navigate(`/user/dsa/topics/`)}}>Start Roadmap</Button>
                 </CardFooter>
               </Card>
             ))}

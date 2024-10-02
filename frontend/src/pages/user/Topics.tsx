@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Input } from "@/components/ui/input"
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ChevronRight } from 'lucide-react'
 import { UserNavbar } from '@/components/Navbar'
 
 const topics = [
@@ -21,7 +21,6 @@ const topics = [
 
 export default function TopicsPage() {
   const [searchTerm, setSearchTerm] = useState('')
-
   const filteredTopics = topics.filter(topic =>
     topic.name.toLowerCase().includes(searchTerm.toLowerCase())
   )
@@ -30,8 +29,20 @@ export default function TopicsPage() {
     <div className="w-screen top-0 absolute left-0 min-h-screen bg-gray-900 text-white">
       <UserNavbar />
       <main className="container mx-auto mt-8 px-4">
+        
+        <nav className="text-sm mb-4">
+          <ol className="list-none p-0 inline-flex">
+            <li className="flex items-center">
+              <Link to="/user/dsa/learn" className="text-blue-400 hover:text-blue-300">Learn</Link>
+              <ChevronRight className="h-4 w-4 mx-2" />
+            </li>
+            <li className="flex items-center">
+              <Link to="/user/dsa/topics" className="text-blue-400 hover:text-blue-300">DSA</Link>
+              <ChevronRight className="h-4 w-4 mx-2" />
+            </li>
+          </ol>
+        </nav>
         <h2 className="text-3xl font-bold mb-6">Data Structures and Algorithms</h2>
-
         <div className="mb-6">
           <Input
             type="text"

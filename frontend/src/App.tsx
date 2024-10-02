@@ -15,7 +15,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div>
+
       <BrowserRouter>
       <Routes>
         <Route path="/" element={< Landing/>}></Route>
@@ -27,7 +27,7 @@ function App() {
         <Route path="/user/dsa/subtopics" element={<SubTopicsPage/>}></Route>
       </Routes>
     </BrowserRouter>
-    </div>
+
     
   )
 }
