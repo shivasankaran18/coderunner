@@ -10,8 +10,8 @@ export  function UserNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
-    { name: "Learn", icon: Book, to: "/learn" },
-    { name: "Problems", icon: Code, to: "/problems" },
+    { name: "Learn", icon: Book, to: "/user/dsa/learn" },
+    { name: "Problems", icon: Code, to: "/user/dsa/problems" },
     { name: "Interview Prep", icon: GraduationCap, to: "/interview-prep" },
   ]
 

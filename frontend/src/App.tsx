@@ -6,6 +6,9 @@ import { Landing } from './pages/Landing'
 import { Home } from './pages/user/Home'
 import { DsaProblems } from './pages/user/Dsaproblems'
 import { DsaProblem } from './pages/user/Dsaproblem'
+import LearnPage from './pages/user/Learn'
+import TopicsPage from './pages/user/Topics'
+import SubTopicsPage from './pages/user/SubTopics'
 
 
 function App() {
@@ -19,8 +22,9 @@ function App() {
         <Route path="/user/home" element={< Home/>}></Route>
         <Route path="/user/dsa/problems" element={<DsaProblems />}></Route>
         <Route path="/user/dsa/problem" element={<DsaProblem />}></Route>
-
-
+        <Route path="/user/dsa/learn" element={<LearnPage/>}></Route>
+        <Route path="/user/dsa/topics" element={<TopicsPage/>}></Route>
+        <Route path="/user/dsa/subtopics" element={<SubTopicsPage/>}></Route>
       </Routes>
     </BrowserRouter>
     </div>

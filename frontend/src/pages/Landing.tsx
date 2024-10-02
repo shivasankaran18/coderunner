@@ -22,7 +22,7 @@ export  function Landing() {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link className="flex items-center justify-center space-x-2" to="#">
             <Code2 className="h-8 w-8 text-indigo-600" />
-            <span className="font-bold text-xl text-gray-900">CodeCampus</span>
+            <span className="font-bold text-xl text-gray-900">CodeRunner</span>
           </Link>
           <nav className="hidden md:flex space-x-8">
             {['Features', 'Pricing', 'About', 'Contact'].map((item) => (
