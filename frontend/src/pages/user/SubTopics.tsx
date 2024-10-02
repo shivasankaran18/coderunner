@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronDown, ChevronRight, Check } from 'lucide-react'
 import { Button } from "@/components/ui/button"
@@ -7,19 +7,19 @@ import ReactMarkdown from 'react-markdown'
 import { UserNavbar } from '@/components/Navbar'
 
 const arraySubtopics = [
-  { name: "Introduction to Arrays", content: "# Introduction to Arrays\n\nArrays are fundamental data structures that store multiple elements of the same type in contiguous memory locations...", problems: [
+  { id:1, name: "Introduction to Arrays", content: "# Introduction to Arrays\n\nArrays are fundamental data structures that store multiple elements of the same type in contiguous memory locations...", problems: [
     { id: 1, title: "Create an Array", completed: false },
     { id: 2, title: "Print Array Elements", completed: true },
   ]},
-  { name: "Array Indexing", content: "# Array Indexing\n\nArray indexing refers to the process of accessing individual elements in an array using their position or index...", problems: [
+  { id:2, name: "Array Indexing", content: "# Array Indexing\n\nArray indexing refers to the process of accessing individual elements in an array using their position or index...", problems: [
     { id: 3, title: "Access nth Element", completed: false },
     { id: 4, title: "Modify Array Element", completed: false },
   ]},
-  { name: "Array Traversal", content: "# Array Traversal\n\nArray traversal involves visiting each element of an array in a specific order, typically from the first element to the last...", problems: [
+  { id:3,name: "Array Traversal", content: "# Array Traversal\n\nArray traversal involves visiting each element of an array in a specific order, typically from the first element to the last...", problems: [
     { id: 5, title: "Sum of Array Elements", completed: false },
     { id: 6, title: "Find Maximum Element", completed: false },
   ]},
-  { name: "Array Operations", content: "# Array Operations\n\nCommon array operations include insertion, deletion, and searching for elements...", problems: [
+  { id:4,name: "Array Operations", content: "# Array Operations\n\nCommon array operations include insertion, deletion, and searching for elements...", problems: [
     { id: 7, title: "Insert Element at Position", completed: false },
     { id: 8, title: "Remove Element from Array", completed: false },
   ]},
@@ -27,6 +27,16 @@ const arraySubtopics = [
 
 export default function ArraysPage() {
   const [selectedTopic, setSelectedTopic] = useState(arraySubtopics[0])
+
+  useEffect(()=>{
+    fetch('/intro_array.md')
+    .then(res=> res.text()).then((text)=>{
+        console.log(text)
+        console.log(selectedTopic.name)
+        selectedTopic.content=text;
+        console.log(selectedTopic.content)
+    })
+  })
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -43,7 +53,34 @@ export default function ArraysPage() {
                       <Button 
                         variant="ghost" 
                         className={`justify-start ${selectedTopic.name === topic.name ? 'bg-blue-500' : ''}`}
-                        onClick={() => setSelectedTopic(topic)}
+                        onClick={() => {
+                          setSelectedTopic(topic);
+                          if(selectedTopic.id == 1){
+                          fetch('/intro_array.md')
+                            .then(res=> res.text()).then((text)=>{
+                                console.log(text)
+                                selectedTopic.content=text;
+                            })
+                            console.log(selectedTopic.content)
+                          }
+                          else if(selectedTopic.id == 2){
+                            fetch('/array_indexing.md')
+                            .then(res=> res.text()).then((text)=>{
+                                console.log(text)
+                                selectedTopic.content=text;
+                            })
+                            console.log(selectedTopic.content)
+                          }
+                          else if(selectedTopic.id == 3){
+                            fetch('/array_traversal.md')
+                            .then(res=> res.text()).then((text)=>{
+                                console.log(text)
+                                selectedTopic.content=text;
+                            })
+                            console.log(selectedTopic.content)
+                          }
+                        }  
+                        }
                       >
                         {topic.name}
                       </Button>
