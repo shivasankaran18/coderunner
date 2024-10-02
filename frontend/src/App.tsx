@@ -12,7 +12,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='w-screen absolute left-0 top-0'>
+
       <BrowserRouter>
       <Routes>
         <Route path="/" element={< Landing/>}></Route>
@@ -23,7 +23,7 @@ function App() {
 
       </Routes>
     </BrowserRouter>
-    </div>
+
     
   )
 }
