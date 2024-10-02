@@ -56,7 +56,7 @@ export function DsaProblem() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 w-full">
+    <div className=" bg-gray-900 text-gray-100 w-full ">
       <UserNavbar />
       <motion.div 
         className="container mx-auto px-4 py-8"
@@ -64,14 +64,14 @@ export function DsaProblem() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-8 ">
           <motion.div 
-            className="lg:w-1/2 bg-gray-800 rounded-lg shadow-lg p-6 overflow-y-auto min-h-screen"
+            className="lg:w-1/2 bg-gray-800 rounded-lg shadow-lg p-6 overflow-y-auto "
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <ReactMarkdown className="prose prose-invert max-w-none min-h-screen" remarkPlugins={[remarkGfm]}>
+            <ReactMarkdown className="prose prose-invert max-w-none " remarkPlugins={[remarkGfm]}>
               {problemContent}
             </ReactMarkdown>
           </motion.div>
