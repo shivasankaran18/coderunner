@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Code2, BrainCircuit, BarChart3, Users, Zap, BookOpen, ChevronRight } from "lucide-react"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
-export  function LandingPage() {
+export  function Landing() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const navigate=useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +31,7 @@ export  function LandingPage() {
               </Link>
             ))}
           </nav>
-          <Button className="hidden md:inline-flex bg-indigo-600 hover:bg-indigo-600">Onboard</Button>
+          <Button className="hidden md:inline-flex bg-indigo-600 hover:bg-indigo-600" onClick={()=>navigate("/user/home")}>Onboard</Button>
         </div>
       </header>
       <main className="flex-1">
