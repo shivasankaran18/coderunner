@@ -17,7 +17,7 @@ export  function Landing() {
   }, [])
 
   return (
-    <div className="flex flex-col w-screen absolute top-0 left-0 min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+    <div className="flex flex-col w-full px-auto bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <header className={`sticky top-0 z-50 transition-all duration-200 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-md' : ''}`}>
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link className="flex items-center justify-center space-x-2" to="#">

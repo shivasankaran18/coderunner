@@ -23,7 +23,7 @@ export function Home() {
   }
 
   return (
-    <div className="min-h-screen py-40 bg-gray-900 text-gray-100 w-screen absolute top-0 left-0">
+    <div className="min-h-screen py-40 bg-gray-900 text-gray-100 w-full">
    
       <motion.div 
         className="container mx-auto px-4 py-16 flex flex-col items-center justify-center"
