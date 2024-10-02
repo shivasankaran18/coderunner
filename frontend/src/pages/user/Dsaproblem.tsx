@@ -40,7 +40,7 @@ export function DsaProblem() {
   const handleLanguageChange = (value: string) => {
     console.log(value)
     setLanguage(value)
-    
+
     // Reset code when language changes
     setCode('// Write your code here\n')
   }
@@ -56,7 +56,7 @@ export function DsaProblem() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 w-screen absolute left-0 top-0">
+    <div className="min-h-screen bg-gray-900 text-gray-100 w-full">
       <UserNavbar />
       <motion.div 
         className="container mx-auto px-4 py-8"
